@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+  
+<bean id="res" class="com.vm.entity.Restaurant">   
+<property name="name" value="KFC"></property> 
+<property name="iHotDrink" ref="c"></property> <!-- iHotDrinkis interface object and t is tea if we want we can change to c as coffee -->
+ <property name="employees">
+ <list>
+ <value>prem</value>
+  <value>kumar</value>
+  <value>battineni</value>
+ </list>
+ </property>
+ 
+ <property name="menu">
+ <set>
+ <value>dosa</value>
+  <value>idli</value>
+  <value>puri</value>
+   <value>idli</value>
+ </set>
+ </property>
+</bean> 
+
+<bean id="t" class="com.vm.entity.Tea"> 
+</bean>
+<bean id="c" class="com.vm.entity.Coffee"> 
+</bean>  
+</beans>
