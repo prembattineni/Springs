@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class IndexController {
 
 	
-	@RequestMapping("/books/{name}/{course}")  //in url after 8081/books/we give number it prints
+	@RequestMapping("/books/{name}/{course}")  //in url after 8081/books/we give number it prints/we give number it prints
 	public String hello(@PathVariable("name") String name,@PathVariable("course") String course )
 	{
 		return "hello world\t" + name+"\t"+course;
